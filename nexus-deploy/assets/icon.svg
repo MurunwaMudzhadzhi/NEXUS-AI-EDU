@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BF5AF2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB627;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00E5FF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer hexagon -->
+  <polygon points="60,4 108,30 108,90 60,116 12,90 12,30" 
+           fill="none" stroke="url(#hexGrad)" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
+  
+  <!-- Middle hexagon -->
+  <polygon points="60,14 98,36 98,84 60,106 22,84 22,36" 
+           fill="rgba(0,229,255,0.04)" stroke="url(#hexGrad)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Neural connection lines -->
+  <line x1="60" y1="22" x2="42" y2="60" stroke="#00E5FF" stroke-width="1" opacity="0.4"/>
+  <line x1="60" y1="22" x2="78" y2="60" stroke="#00E5FF" stroke-width="1" opacity="0.4"/>
+  <line x1="42" y1="60" x2="60" y2="98" stroke="#BF5AF2" stroke-width="1" opacity="0.4"/>
+  <line x1="78" y1="60" x2="60" y2="98" stroke="#BF5AF2" stroke-width="1" opacity="0.4"/>
+  <line x1="42" y1="60" x2="78" y2="60" stroke="#FFB627" stroke-width="1" opacity="0.4"/>
+  <line x1="22" y1="42" x2="42" y2="60" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+  <line x1="98" y1="42" x2="78" y2="60" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+  <line x1="22" y1="78" x2="42" y2="60" stroke="#BF5AF2" stroke-width="1" opacity="0.3"/>
+  <line x1="98" y1="78" x2="78" y2="60" stroke="#BF5AF2" stroke-width="1" opacity="0.3"/>
+
+  <!-- Neural nodes -->
+  <circle cx="60" cy="22" r="4" fill="#00E5FF" filter="url(#glow)"/>
+  <circle cx="42" cy="60" r="4" fill="#00E5FF" filter="url(#glow)"/>
+  <circle cx="78" cy="60" r="4" fill="#BF5AF2" filter="url(#glow)"/>
+  <circle cx="60" cy="98" r="4" fill="#BF5AF2" filter="url(#glow)"/>
+  <circle cx="22" cy="42" r="2.5" fill="#FFB627" opacity="0.7"/>
+  <circle cx="98" cy="42" r="2.5" fill="#FFB627" opacity="0.7"/>
+  <circle cx="22" cy="78" r="2.5" fill="#FFB627" opacity="0.7"/>
+  <circle cx="98" cy="78" r="2.5" fill="#FFB627" opacity="0.7"/>
+
+  <!-- Center N letterform -->
+  <text x="60" y="67" font-family="'Arial Black', sans-serif" font-size="28" font-weight="900"
+        text-anchor="middle" fill="url(#innerGrad)" filter="url(#softglow)" letter-spacing="-1">N</text>
+</svg>

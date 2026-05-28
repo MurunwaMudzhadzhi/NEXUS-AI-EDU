@@ -1,0 +1,24 @@
+# ============================================================
+#  NEXUS AI — Render Deployment Config
+# ============================================================
+
+services:
+  - type: web
+    name: nexus-ai-edu
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GROQ_API_KEY
+        sync: false          # Set this in Render Dashboard → Environment
+      - key: RATE_LIMIT_MAX
+        value: "100"
+      - key: ALLOWED_ORIGINS
+        value: "*"

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXUS AI — Education Intelligence Platform</title>
+  <meta name="description" content="NEXUS AI: AI-powered education platform — EduChat tutor, StudyForge, EmpathyLens, and AcademIQ ML suite. Powered by Groq LLaMA 3.3."/>
+  <meta name="theme-color" content="#04040E"/>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/modules.css"/>
+</head>
+<body>
+
+<!-- Splash -->
+<div id="splash-screen">
+  <img src="assets/icon.svg" alt="NEXUS AI" class="splash-logo"/>
+  <div class="splash-title">NEXUS AI</div>
+  <div class="splash-subtitle">Education Intelligence Platform</div>
+  <div class="splash-bar-wrap"><div class="splash-bar-fill"></div></div>
+</div>
+
+<canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+<div id="app-wrapper">
+
+  <!-- NAV -->
+  <nav id="main-nav" role="navigation">
+    <div class="nav-logo" data-nav="home" role="button" tabindex="0">
+      <img src="assets/icon.svg" alt="NEXUS AI" class="nav-logo-icon"/>
+      <div>
+        <span class="nav-logo-text">NEXUS AI</span>
+        <span class="nav-logo-sub">Education Intelligence</span>
+      </div>
+    </div>
+    <div class="nav-links" role="menubar">
+      <button class="nav-btn" data-nav="home"><span class="nav-icon">⌂</span> Home</button>
+      <button class="nav-btn" data-nav="chatbot"><span class="nav-icon">🎓</span> EduChat</button>
+      <button class="nav-btn" data-nav="generator"><span class="nav-icon">✦</span> StudyForge</button>
+      <button class="nav-btn" data-nav="sentiment"><span class="nav-icon">◉</span> EmpathyLens</button>
+      <button class="nav-btn" data-nav="academiq"><span class="nav-icon">🧠</span> AcademIQ</button>
+      <button class="nav-btn" data-nav="projects"><span class="nav-icon">🔬</span> Projects</button>
+      <button class="nav-btn" data-nav="about"><span class="nav-icon">🌐</span> About</button>
+      <button class="nav-btn nav-cta" data-nav="settings"><span class="nav-icon">⚙️</span> Settings</button>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home-section" class="module-section" role="main">
+    <div class="hero">
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Groq LLaMA 3.3 · Education Intelligence · v2.2</div>
+      <div class="hero-logo-wrap">
+        <img src="assets/icon.svg" alt="NEXUS AI" class="hero-logo-img"/>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line1">NEXUS AI</span>
+        <span class="hero-title-line2">EDUCATION INTELLIGENCE PLATFORM</span>
+      </h1>
+      <p class="hero-subtitle">
+        Four integrated AI modules that <strong>transform how students learn</strong>,
+        educators teach, and institutions understand outcomes —
+        powered by <strong>Groq LLaMA 3.3 70B</strong> and advanced ML algorithms.
+      </p>
+      <div class="hero-cta-row">
+        <button class="btn-primary" data-nav="chatbot">🎓 Start Learning</button>
+        <button class="btn-secondary" data-nav="academiq">🧠 Explore AcademIQ</button>
+        <button class="btn-secondary" data-nav="projects">🔬 ML Projects</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-value" data-counter="4" data-suffix="">0</div><div class="stat-label">AI Modules</div></div>
+        <div class="stat-item"><div class="stat-value" data-counter="15" data-suffix="+">0</div><div class="stat-label">Subjects</div></div>
+        <div class="stat-item"><div class="stat-value" data-counter="6" data-suffix="">0</div><div class="stat-label">Content Types</div></div>
+        <div class="stat-item"><div class="stat-value" data-counter="4" data-suffix="">0</div><div class="stat-label">ML Models</div></div>
+      </div>
+    </div>
+
+    <!-- Module Cards -->
+    <div class="modules-section">
+      <div class="section-header">
+        <span class="section-eyebrow">Platform Overview</span>
+        <h2 class="section-title">Four Intelligent Modules</h2>
+        <p class="section-desc">Each module is a fully-functional AI system, unified under a single education-first platform</p>
+      </div>
+      <div class="modules-grid">
+        <div class="module-card" data-module="chatbot" role="button" tabindex="0">
+          <div class="card-icon-wrap">🎓</div>
+          <span class="card-tag">Module 01 · NLP</span>
+          <h3 class="card-title">EduChat Tutor</h3>
+          <p class="card-desc">AI conversational tutor for any academic concept — powered by LLaMA 3.3 70B via Groq.</p>
+          <div class="card-features">
+            <div class="card-feature"><div class="card-feature-dot"></div><span>9+ academic subjects</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Conversation history & context</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Step-by-step explanations</span></div>
+          </div>
+          <button class="card-launch-btn"><span>Launch EduChat</span><span>→</span></button>
+        </div>
+        <div class="module-card" data-module="generator" role="button" tabindex="0">
+          <div class="card-icon-wrap">📝</div>
+          <span class="card-tag">Module 02 · Generative AI</span>
+          <h3 class="card-title">StudyForge</h3>
+          <p class="card-desc">Generate lesson plans, quizzes, flashcards, study notes & essay outlines for any topic.</p>
+          <div class="card-features">
+            <div class="card-feature"><div class="card-feature-dot"></div><span>6 content types</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>4 education levels</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Download & export</span></div>
+          </div>
+          <button class="card-launch-btn"><span>Launch StudyForge</span><span>→</span></button>
+        </div>
+        <div class="module-card" data-module="sentiment" role="button" tabindex="0">
+          <div class="card-icon-wrap">💡</div>
+          <span class="card-tag">Module 03 · Sentiment Analysis</span>
+          <h3 class="card-title">EmpathyLens</h3>
+          <p class="card-desc">Decode emotions in student feedback with 6-dimension analysis and educator insights.</p>
+          <div class="card-features">
+            <div class="card-feature"><div class="card-feature-dot"></div><span>6-emotion breakdown</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Confidence scoring</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Actionable insights</span></div>
+          </div>
+          <button class="card-launch-btn"><span>Launch EmpathyLens</span><span>→</span></button>
+        </div>
+        <div class="module-card" data-module="academiq" role="button" tabindex="0">
+          <div class="card-icon-wrap">🧠</div>
+          <span class="card-tag">Module 04 · Machine Learning</span>
+          <h3 class="card-title">AcademIQ Suite</h3>
+          <p class="card-desc">Four ML models — course recommender, at-risk classifier, grade forecaster, RL path optimizer.</p>
+          <div class="card-features">
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Collaborative filtering</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Multi-feature classification</span></div>
+            <div class="card-feature"><div class="card-feature-dot"></div><span>Regression + RL</span></div>
+          </div>
+          <button class="card-launch-btn"><span>Launch AcademIQ</span><span>→</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Setup Strip -->
+    <div style="padding:0 32px 20px;max-width:1300px;margin:0 auto;width:100%">
+      <div style="border:1px solid rgba(255,182,39,0.25);border-radius:var(--radius-xl);padding:20px 28px;background:rgba(255,182,39,0.04);display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+        <span style="font-size:1.4rem">⚡</span>
+        <div style="flex:1">
+          <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Quick Start — works directly in your browser</div>
+          <div style="font-size:0.8rem;color:var(--text-secondary)">
+            Go to <strong style="color:var(--accent-amber)">⚙️ Settings</strong>, paste your
+            <strong>Groq API key</strong> (free at console.groq.com), click Save — all AI features activate instantly.
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="action-btn action-btn-amber" data-nav="settings" style="font-size:0.82rem;padding:9px 18px">⚙️ Add Groq Key</button>
+          <a href="https://console.groq.com" target="_blank" style="display:inline-flex;align-items:center;padding:9px 18px;background:transparent;border:1px solid var(--border-subtle);border-radius:var(--radius-full);color:var(--text-secondary);font-size:0.82rem;text-decoration:none">Get Free Key →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Strip -->
+    <div style="padding:0 32px 80px;max-width:1300px;margin:0 auto;width:100%">
+      <div style="border:1px solid var(--border-subtle);border-radius:var(--radius-xl);padding:20px 28px;background:var(--bg-card);backdrop-filter:blur(12px);display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap">Powered by</div>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center">
+          <span style="font-size:0.82rem;color:var(--text-secondary)">⚡ Groq LLaMA 3.3 70B</span>
+          <span style="font-size:0.82rem;color:var(--text-secondary)">🖥️ Node.js + Express</span>
+          <span style="font-size:0.82rem;color:var(--text-secondary)">📐 Cosine Similarity</span>
+          <span style="font-size:0.82rem;color:var(--text-secondary)">📈 Linear Regression</span>
+          <span style="font-size:0.82rem;color:var(--text-secondary)">⚖️ Classification</span>
+          <span style="font-size:0.82rem;color:var(--text-secondary)">🎮 Q-Learning RL</span>
+        </div>
+        <div style="margin-left:auto">
+          <button class="action-btn action-btn-ghost" data-nav="settings" style="font-size:0.78rem;padding:8px 16px">⚙️ Configure</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE SECTIONS -->
+  <section id="chatbot-section"   class="module-section" role="main"></section>
+  <section id="generator-section" class="module-section" role="main"></section>
+  <section id="sentiment-section" class="module-section" role="main"></section>
+  <section id="academiq-section"  class="module-section" role="main"></section>
+  <section id="projects-section"  class="module-section" role="main"></section>
+  <section id="about-section"     class="module-section" role="main"></section>
+  <section id="settings-section"  class="module-section" role="main"></section>
+
+  <footer id="main-footer">
+    <span>NEXUS AI</span> · Education Intelligence Platform v2.2 ·
+    Groq LLaMA 3.3 70B · Supervised ML · Unsupervised Learning · Reinforcement Learning
+  </footer>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/sentiment.js"></script>
+<script src="js/academiq.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/about.js"></script>
+<script src="js/settings.js"></script>
+
+<script>
+  window.addEventListener("load", ()=>{
+    setTimeout(()=>{
+      const s = document.getElementById("splash-screen");
+      if(s){ s.classList.add("fade-out"); setTimeout(()=>s.remove(),700); }
+    }, 1800);
+  });
+</script>
+</body>
+</html>

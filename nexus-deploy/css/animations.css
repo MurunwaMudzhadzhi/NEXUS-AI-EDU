@@ -1,0 +1,179 @@
+/* ============================================================
+   NEXUS AI — ANIMATIONS
+   ============================================================ */
+
+/* ── Keyframes ────────────────────────────────────────────── */
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+@keyframes float-logo {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(0,229,255,0.15); }
+  50%       { box-shadow: 0 0 24px rgba(0,229,255,0.35); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.3; transform: scale(0.8); }
+  30%            { opacity: 1;   transform: scale(1.2); }
+}
+
+/* ── Utility Animation Classes ────────────────────────────── */
+
+.animate-fade-in      { animation: fadeIn 0.5s ease both; }
+.animate-fade-up      { animation: fadeSlideUp 0.5s ease both; }
+.animate-fade-down    { animation: fadeSlideDown 0.5s ease both; }
+.animate-scale-in     { animation: scaleIn 0.4s ease both; }
+
+.animate-delay-1      { animation-delay: 0.08s; }
+.animate-delay-2      { animation-delay: 0.16s; }
+.animate-delay-3      { animation-delay: 0.24s; }
+.animate-delay-4      { animation-delay: 0.32s; }
+
+/* ── Module Transition ────────────────────────────────────── */
+
+.module-section {
+  animation: none;
+}
+
+.module-section.entering {
+  animation: scaleIn 0.35s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* ── Chat Animations ──────────────────────────────────────── */
+
+.chat-message {
+  animation: fadeSlideUp 0.3s ease both;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--accent-teal);
+  border-radius: 50%;
+  margin: 0 2px;
+}
+.typing-indicator span:nth-child(1) { animation: typing 1.2s ease infinite 0s; }
+.typing-indicator span:nth-child(2) { animation: typing 1.2s ease infinite 0.2s; }
+.typing-indicator span:nth-child(3) { animation: typing 1.2s ease infinite 0.4s; }
+
+/* ── Shimmer Loading ──────────────────────────────────────── */
+
+.shimmer-line {
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0.04) 0%, 
+    rgba(255,255,255,0.1) 50%, 
+    rgba(255,255,255,0.04) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  margin-bottom: 10px;
+}
+
+.shimmer-line.short { width: 60%; }
+.shimmer-line.med   { width: 80%; }
+.shimmer-line.full  { width: 100%; }
+
+/* ── Score Ring Animation ─────────────────────────────────── */
+
+.score-ring circle {
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ── Card Stagger ─────────────────────────────────────────── */
+
+.modules-grid .module-card:nth-child(1) { animation: fadeSlideUp 0.6s ease 0.1s both; }
+.modules-grid .module-card:nth-child(2) { animation: fadeSlideUp 0.6s ease 0.18s both; }
+.modules-grid .module-card:nth-child(3) { animation: fadeSlideUp 0.6s ease 0.26s both; }
+.modules-grid .module-card:nth-child(4) { animation: fadeSlideUp 0.6s ease 0.34s both; }
+
+/* ── Glow pulse on active nav ─────────────────────────────── */
+
+.nav-btn.active {
+  animation: glowPulse 3s ease infinite;
+}
+
+/* ── Result reveal ────────────────────────────────────────── */
+
+.result-reveal {
+  animation: fadeSlideUp 0.4s ease both;
+}
+
+/* ── Bar chart animation ──────────────────────────────────── */
+.bar-animated {
+  animation: expandBar 0.8s cubic-bezier(0.16,1,0.3,1) both;
+  transform-origin: left;
+}
+
+@keyframes expandBar {
+  from { width: 0 !important; }
+  to   { /* to natural width */ }
+}
